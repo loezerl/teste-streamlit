@@ -47,6 +47,7 @@ ignore_columns = [
     'Data',
     'obitos'
 ]
+st.write(df.head())
 drop_columns = []
 plot_columns = []
 for c in df.columns.values:
