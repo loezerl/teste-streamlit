@@ -98,4 +98,4 @@ st.subheader("Gráfico de positivos (%) por faixa etária")
 st.area_chart(df[plot_columns])
 
 st.subheader("Gráfico de positividade (%)")
-st.area_chart(df['positividade'])
+st.line_chart(df['positividade'])
