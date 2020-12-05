@@ -75,10 +75,10 @@ for k in FAIXA_ETARIA:
 df['pcr'] = df['pcr-positivo'] + df['pcr-negativo']
 df = df[df['pcr-positivo'] != 0]
 ignore_columns = [
-    'pcr',
+    'Data',
     'pcr-positivo',
     'pcr-negativo',
-    'Data',
+    'pcr',
     'obitos'
 ]
 df = df[ignore_columns + filtro_idades]
