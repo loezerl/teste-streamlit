@@ -40,6 +40,15 @@ elif option == "Rio Grande do Sul":
 
 df.replace(np.nan, 0, inplace=True)
 df['Data'] = pd.to_datetime(df['Data'], format="%Y-%m-%d")
+
+
+st.write("Deseja filtrar por algum período específico?")
+d3 = st.date_input("Período selecionado", [])
+st.write("Início: {} | Fim: {}".format(str(d3[0]), str(d3[1])))
+if len(d3) > 0:
+    df = df[df['Data'] >= str(d3[0])]
+    df = df[df['Data'] <= str(d3[1])]
+
 df = df[df['pcr-positivo'] != 0]
 ignore_columns = [
     'pcr-positivo',
